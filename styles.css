@@ -1,0 +1,84 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+  font-family: Gotham Rounded, sans-serif;
+  font-weight: normal;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  background: linear-gradient(
+  to top, rgba(255,255,255,0) 20%,
+  rgba(255,255,255,1)), url(img/b2.jpg) 
+  no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  /* background: linear-gradient(to right, #00AAFF, #00FF6C); */
+}
+
+/* //space and align items */
+.calculator-grid {
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  min-height: 100vh;
+  grid-template-columns: repeat(4, 100px);
+  grid-template-rows: minmax(120px, auto) repeat(5, 100px);
+}
+
+/* position the items */
+.calculator-grid > button {
+  cursor: pointer;
+  font-size: 2rem;
+  border: 1px solid #fff;
+  outline: none;
+  /* background-color: rgba(255, 255, 255, .90); */
+}
+
+/* change color on hover */
+.calculator-grid > button:hover {
+  background-color: rgba(79, 82, 95, 0.75);
+}
+
+/* AC SPAN TWO COLUMNS  */
+.span-two {
+  grid-column: span 2;
+
+}
+.blue {
+ background-color: rgb(212, 225, 247);
+}
+.pink{
+  background-color: rgb(235, 137, 153);
+}
+.white{
+  background-color: rgb(253, 253, 253); 
+}
+.dark-blue{
+  background-color:  rgb(161, 193, 248);
+}
+
+/* STYLING THE TOP COLUMN */
+.output {
+  grid-column: 1 / -1;
+  background-color: rgba(62, 100, 224, 0.75);
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-around;
+  flex-direction: column;
+  padding: 75px;
+  word-wrap: break-word;
+  word-break: break-all;
+}
+
+.output .previous-operand {
+  color: rgba(255, 255, 255, .75);
+  font-size: 1.5rem;
+}
+
+.output .current-operand {
+  color: white;
+  font-size: 2.5rem;
+}
